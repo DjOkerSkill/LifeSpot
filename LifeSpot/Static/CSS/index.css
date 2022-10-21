@@ -23,8 +23,14 @@ header, footer, body, .video-container {
         color: aliceblue;
     }
 
+input {
+    
+    width: 20%;
+}
+
 input:hover {
     color: indianred;
+    width: 20%;
 }
 
 /*Глобальные стили для хедеров на всём сайте*/
@@ -65,4 +71,18 @@ aside {
 
 body {
     padding-left: 11%;
+}
+
+.review-container, .review-button {
+    display: inline-block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
+}
+
+.review-text {
+    display: block;
+    margin-top: 0.5em;
+    padding-left: 1%;
+    padding-top: 1%;
 }

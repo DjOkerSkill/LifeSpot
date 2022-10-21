@@ -5,20 +5,51 @@
     <title>LifeSpot</title>
     <!--Подключение стилей по относительному пути из внешнего файла-->
     <link href="../Static/CSS/index.css" rel="stylesheet" type="text/css">
+    <script defertype="text/javascript" src="../Static/JS/index.js"></script>
+    <script>
+        // для получения пользовательского ввода самое простое - воспользоваться конструкцией prompt()
+        let userName = prompt("Пожалуйста, введите ваше имя");
+        alert(`Приветствуем, ${userName}. В вашем имени ${userName.length} символов`)
+        setTimeout(() =>
+            alert("Нравится LifeSpot? " + '\n' + "Подпишитесь на наш Instagram @lifespot999!"),
+            30000);
+    </script>
+    <script>
+        // Проверка на возраст
+        //checkAge();
+
+        // сохранение сессии
+        handleSession()
+
+        // вывод данных сессии в консоль
+        sessionLog();
+
+        // функция для получения пользовательского ввода
+        const inputParseFunction = function () {
+            return document.getElementsByTagName('input')[0].value.toLowerCase();
+        }
+    </script>
 </head>
 <body>
     <header id="header-index">
-        <!--Заголовок страницы-->
         <h1>LifeSpot - прямые трансляции с улиц</h1>
-        <input  type="text" />
-        <!--Параграф-->
         <p>Покажем, что происходит прямо сейчас</p>
+        <input type="text" oninput="
+        // Функция объявлена через declaration
+       const inputParseFunction = function(){
+           return document.getElementsByTagName('input')[0].value.toLowerCase();
+       }
+
+       // Вызов (функция в аргумент передаётся без круглых скобок)
+       filterContent( inputParseFunction )
+
+" size=50%>
     </header>
     <!--Сайд-бар страницы (пока все ссылки ведут на главную)-->
     <aside id="sidebar">
         <div class="navbar">
             <a href="/"><p>Все трансляции</p></a>
-            <a href="/"><p>О проекте</p></a>
+            <a href="/about"><p>О проекте</p></a>
         </div>
     </aside>
     <footer>
